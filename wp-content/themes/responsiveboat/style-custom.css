@@ -1,0 +1,57 @@
+
+/*
+  Projektista
+*/
+.imgwrapper {
+  position: relative;
+
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.imgwrapper img { 
+  position: relative; 
+  width: 100%; /* for IE 6 */
+}
+
+.imgwrapper span {
+  position: absolute;
+
+  color: white; 
+  font: bold 80px Helvetica, Sans-Serif; 
+  letter-spacing: -1px;  
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px; 
+
+  left: 50px;
+  bottom: 30px;
+}
+
+/*
+  Tekstiwrapper
+*/
+
+.pagetext-header {
+  text-align: center;
+}
+
+.subheader {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 5px 0;
+  border-bottom: 3px solid #FD0;
+}
+
+.pagetext-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 30px;
+  text-align: justify;
+}
+
+.pagetext-wrapper span {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 5px 0 0 0;
+}
