@@ -1,7 +1,6 @@
-<?php /* Template Name: Projektista */ ?>
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Projektista
  */
 get_header(); ?>
 
@@ -9,56 +8,30 @@ get_header(); ?>
 
 </header> <!-- / END HOME SECTION  -->
 
-<?php
-$zerif_change_to_full_width = get_theme_mod( 'zerif_change_to_full_width' );
-?>
-
 <div id="content" class="site-content">
 
-	<div class="container">
+  <div class="container">
 
-	<?php
-		if( (function_exists('is_cart') && is_cart()) || (function_exists('is_account_page') && is_account_page()) || (function_exists('is_checkout') && is_checkout() ) || !empty($zerif_change_to_full_width) ) {
-			echo '<div class="content-left-wrap col-md-12">';
-		}
-		else {
-			echo '<div class="content-left-wrap col-md-9">';
-		}
-		?>
+    <div class="content-left-wrap col-md-12">
 
-		<div id="primary" class="content-area">
+      <div id="primary" class="content-area">
 
-			<main itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage" id="main" class="site-main" role="main">
+        <div class="team-member">
+          <div class="team-member shot">
+            <img src="./images/team1.png" alt="Oskar Niemenoja"/>
+          </div>
 
-				<?php while ( have_posts() ) : the_post(); 
-				
-						get_template_part( 'content', 'page' );
+          <div class="team-membet bio">
+          <h4>Oskar Niemenoja</h4>
+          <p class="subtitle">Webdev ja settii</p>
+          <p class="text">Tässä on esittely jäbäst</p>
+          </div>
+        </div><!-- .team-member -->
 
-						if ( comments_open() || '0' != get_comments_number() ) :
+      </div><!-- #primary -->
 
-							comments_template();
+    </div><!-- .content-left-wrap -->
 
-						endif;
-
-					endwhile; 
-				?>
-
-			</main><!-- #main -->
-
-		</div><!-- #primary -->
-
-	<?php
-		if( (function_exists('is_cart') && is_cart()) || (function_exists('is_account_page') && is_account_page()) || (function_exists('is_checkout') && is_checkout() ) || !empty($zerif_change_to_full_width) ) {
-			echo '</div>';
-		}
-		else {
-			echo '</div>';
-			echo '<div class="sidebar-wrap col-md-3 content-left-wrap">';
-				get_sidebar();
-			echo '</div>';
-		}
-		?>	
-
-	</div><!-- .container -->
+  </div><!-- .container -->
 
 <?php get_footer(); ?>

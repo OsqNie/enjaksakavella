@@ -1,5 +1,10 @@
 <?php
 
+/* 
+  Add custom functions
+*/
+require_once('functions-custom.php');
+
 function responsiveboat_setup() {
 
 	add_image_size('rb_latest_news_photo', 480, 480, true);
